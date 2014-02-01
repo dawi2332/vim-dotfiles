@@ -143,6 +143,8 @@ if has("autocmd")
   autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
   let javascript_enable_domhtmlcss=1
   autocmd FileType d setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
+  autocmd FileType sh setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
+  autocmd FileType zsh setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
 
 else
 
@@ -165,7 +167,7 @@ if has("gui_running")
   colorscheme solarized
   set guifont=Menlo\ for\ Powerline:h14
   let g:Powerline_symbols = 'fancy'
-"  let g:Powerline_colorscheme = 'solarized256'
+  let g:Powerline_colorscheme = 'solarized256'
   set columns=100
   set lines=32
   set guioptions-=T
