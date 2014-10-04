@@ -140,7 +140,7 @@ if has("autocmd")
   autocmd FileType rst setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
   autocmd FileType cs setlocal tabstop=8 softtabstop=8 shiftwidth=8
   autocmd FileType vim setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
-  autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+  autocmd FileType javascript setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
   let javascript_enable_domhtmlcss=1
   autocmd FileType d setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
   autocmd FileType sh setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
