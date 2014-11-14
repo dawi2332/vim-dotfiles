@@ -165,7 +165,7 @@ if has("gui_running")
   "colorscheme darkbone
   set background=dark
   colorscheme solarized
-  set guifont=Menlo\ for\ Powerline:h14
+  set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h14
   let g:Powerline_symbols = 'fancy'
   let g:Powerline_colorscheme = 'solarized256'
   set columns=100
@@ -173,7 +173,7 @@ if has("gui_running")
   set guioptions-=T
   set guioptions-=r
 else
-  colorscheme elflord
+  colorscheme darkbone
 endif
 
 " compiler stuff
