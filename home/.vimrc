@@ -35,8 +35,9 @@ set noerrorbells
 set cursorline
 
 source ~/.vim/scripts/FeralToggleCommentify.vim
-map <M-c> :call ToggleCommentify()<CR>j 
-imap <M-c>  <ESC>:call ToggleCommentify()<CR>j 
+
+map <M-c> :call ToggleCommentify()<CR>j
+imap <M-c>  <ESC>:call ToggleCommentify()<CR>j
 
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
@@ -157,17 +158,19 @@ endif " has("autocmd")
 " file it was loaded from, thus the changes you made.
 " Only define it when not defined already.
 if !exists(":DiffOrig")
-  command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
+  command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis | wincmd p | diffthis
 endif
 
 if has("gui_running")
-  "colorscheme darkbone
+  syntax enable
   set background=dark
   colorscheme solarized
-  set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h14
+  set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h13
   let g:Powerline_symbols = 'fancy'
   let g:Powerline_colorscheme = 'solarized256'
+  let g:airline_theme = 'solarized'
+  let g:airline_powerline_fonts=1
+  let g:airline#extensions#tabline#enabled = 1
   set columns=100
   set lines=32
   set guioptions-=T
@@ -189,3 +192,8 @@ map <Leader>l :cl<CR>
 " jump between messages
 map <Leader>n :cn<CR>
 map <Leader>p :cp<CR>
+
+nmap <F8> :TagbarToggle<CR>
+
+
+let g:bufferline_echo = 0

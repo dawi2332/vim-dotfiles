@@ -16,9 +16,15 @@
 [submodule "home/.vim/bundle/ctrlp.vim"]
 	path = home/.vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
-[submodule "vendor/powerline"]
-	path = vendor/powerline
-	url = https://github.com/Lokaltog/powerline.git
 [submodule "vendor/powerline-fonts"]
 	path = vendor/powerline-fonts
 	url = https://github.com/Lokaltog/powerline-fonts.git
+[submodule "home/.vim/bundle/tagbar"]
+	path = home/.vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+[submodule "home/.vim/bundle/nerdtree"]
+	path = home/.vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "home/.vim/bundle/vim-airline"]
+	path = home/.vim/bundle/vim-airline
+	url = https://github.com/bling/vim-airline.git
