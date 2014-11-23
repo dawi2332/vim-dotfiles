@@ -1,9 +1,6 @@
 [submodule "vendor/vim-pathogen"]
 	path = vendor/vim-pathogen
 	url = git://github.com/tpope/vim-pathogen.git
-[submodule "home/.vim/bundle/syntastic"]
-	path = home/.vim/bundle/syntastic
-	url = git://github.com/scrooloose/syntastic.git
 [submodule "home/.vim/bundle/vim-fugitive"]
 	path = home/.vim/bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
