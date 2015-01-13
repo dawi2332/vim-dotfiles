@@ -33,3 +33,6 @@
 	path = home/.vim/bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
 	branch = master
+[submodule "home/.vim/bundle/vim-systemd-syntax"]
+	path = home/.vim/bundle/vim-systemd-syntax
+	url = https://github.com/Matt-Deacalion/vim-systemd-syntax.git
