@@ -36,3 +36,6 @@
 [submodule "home/.vim/bundle/vim-systemd-syntax"]
 	path = home/.vim/bundle/vim-systemd-syntax
 	url = https://github.com/Matt-Deacalion/vim-systemd-syntax.git
+[submodule "home/.vim/bundle/dockerfile.vim"]
+	path = home/.vim/bundle/dockerfile.vim
+	url = https://github.com/honza/dockerfile.vim.git
