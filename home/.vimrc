@@ -146,6 +146,7 @@ if has("autocmd")
   autocmd FileType d setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
   autocmd FileType sh setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
   autocmd FileType zsh setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
+  autocmd FileType go setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 
 else
 
@@ -197,3 +198,12 @@ nmap <F8> :TagbarToggle<CR>
 
 
 let g:bufferline_echo = 0
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
