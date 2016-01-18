@@ -51,3 +51,9 @@
 [submodule "home/.vim/bundle/molokai"]
 	path = home/.vim/bundle/molokai
 	url = https://github.com/tomasr/molokai.git
+[submodule "home/.vim/bundle/vim-surround"]
+	path = home/.vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "home/.vim/bundle/vim-signify"]
+	path = home/.vim/bundle/vim-signify
+	url = https://github.com/mhinz/vim-signify.git
