@@ -88,8 +88,7 @@ set dir=~/.vim/sessions
 map Q gq
 
 
-" Auto commands {{{1
-if has("autocmd")
+if has("autocmd") " {{{1
   filetype plugin indent on
 
   " Put these in an autocmd group, so that we can delete them easily.
@@ -124,7 +123,7 @@ if has("autocmd")
     " ------------------------------------------
     "  and disable taht stupid html rendering (like making stuff bold etc)
 
-    fun! s:SelectHTML()
+    fun! s:SelectHTML() " {{{3
       let n = 1
       while n < 50 && n < line("$")
         " check for jinja
@@ -152,6 +151,7 @@ if has("autocmd")
       " go with html
       set ft=html
     endfun
+    " }}}3
 
     autocmd FileType html,xhtml,xml,htmldjango,htmljinja,eruby,mako setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
     autocmd BufNewFile,BufRead *.rhtml setlocal ft=eruby
@@ -185,8 +185,7 @@ if has("autocmd")
   augroup END " }}}2
 else
   set autoindent " always set autoindenting on
-endif " has("autocmd")
-" }}}1
+endif " has("autocmd") }}}1
 
 "
 " Convenient command to see the difference between the current buffer and the
@@ -196,7 +195,7 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis | wincmd p | diffthis
 endif
 
-function! Fancy()
+function! Fancy() " {{{1
   if &number
     if has("gui_running")
       let &columns=&columns-12
@@ -218,6 +217,7 @@ function! Fancy()
   endif
 endfunction
 command! -bar Fancy :call Fancy()
+" }}}1
 
 " compiler stuff
 let g:compiler_gcc_ignore_unmatched_lines=1
@@ -262,8 +262,7 @@ let g:airline#extensions#hunks#enabled = 1
 let g:airline#extensions#whitespace#enabled = 1
 " }}}1
 
-" Visual options {{{1
-if (&t_Co > 2 || has("gui_running")) && has("syntax")
+if (&t_Co > 2 || has("gui_running")) && has("syntax") " {{{1
   function! s:initialize_font()
     if exists("&guifont")
       if has("mac")
@@ -303,5 +302,4 @@ if (&t_Co > 2 || has("gui_running")) && has("syntax")
     autocmd Syntax css  syn sync minlines=50
     autocmd Syntax csh  hi link cshBckQuote Special | hi link cshExtVar PreProc | hi link cshSubst PreProc | hi link cshSetVariables Identifier
   augroup END
-endif " (&t_Co > 2 || has("gui_running")) && has("syntax")
-" }}}1
+endif " (&t_Co > 2 || has("gui_running")) && has("syntax") }}}1
