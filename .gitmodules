@@ -45,3 +45,9 @@
 [submodule "home/.vim/bundle/vim-commentary"]
 	path = home/.vim/bundle/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
+[submodule "home/.vim/bundle/vim-tomorrow-theme"]
+	path = home/.vim/bundle/vim-tomorrow-theme
+	url = https://github.com/chriskempson/vim-tomorrow-theme.git
+[submodule "home/.vim/bundle/molokai"]
+	path = home/.vim/bundle/molokai
+	url = https://github.com/tomasr/molokai.git
