@@ -7,6 +7,7 @@ set autoindent
 set backspace=indent,eol,start
 set complete-=i
 set smarttab
+set ignorecase
 set smartcase       " Case insensitive searches become sensitive with capitals
 
 set foldmethod=marker
@@ -17,6 +18,7 @@ set nrformats-=octal
 set ttimeout
 set ttimeoutlen=100
 
+set hlsearch
 set incsearch
 " Use <C-L> to clear the highlighting of :set hlsearch.
 if maparg('<C-L>', 'n') ==# ''
@@ -81,8 +83,8 @@ endif
 
 inoremap <C-U> <C-G>u<C-U>
 
-set backupdir=~/.vim/sessions
-set dir=~/.vim/sessions
+"set backupdir=~/.vim/sessions
+"set dir=~/.vim/sessions
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
@@ -171,7 +173,9 @@ if has("autocmd") " {{{1
     autocmd FileType cs setlocal tabstop=8 softtabstop=8 shiftwidth=8
     autocmd FileType vim setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
     autocmd FileType javascript setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
-          \  let javascript_enable_domhtmlcss=1
+          \ | let javascript_enable_domhtmlcss=1
+    autocmd FileType json setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
+    autocmd FileType yaml setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
     autocmd FileType d setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
     autocmd FileType sh setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
     autocmd FileType zsh setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4
@@ -267,6 +271,9 @@ if (&t_Co > 2 || has("gui_running")) && has("syntax") " {{{1
     if exists("&guifont")
       if has("mac")
         set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h13,Menlo:h13
+        if has("gui_running")
+          set macthinstrokes
+        endif
       elseif has("unix")
         if &guifont == ""
           set guifont=Monospace\ Medium\ 12
