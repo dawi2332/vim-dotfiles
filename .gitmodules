@@ -57,3 +57,10 @@
 [submodule "home/.vim/bundle/vim-signify"]
 	path = home/.vim/bundle/vim-signify
 	url = https://github.com/mhinz/vim-signify.git
+[submodule "home/.vim/bundle/vim-sensible"]
+	path = home/.vim/bundle/vim-sensible
+	url = git://github.com/tpope/vim-sensible.git
+	branch = master
+[submodule "home/.vim/bundle/vim-sleuth"]
+	path = home/.vim/bundle/vim-sleuth
+	url = git://github.com/tpope/vim-sleuth.git
