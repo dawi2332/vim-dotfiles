@@ -57,6 +57,8 @@ if has("autocmd") " {{{1
     "let python_highlight_builtins=0
     autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
     autocmd FileType php setlocal shiftwidth=8 tabstop=8 softtabstop=8
+    autocmd FileType c setlocal smartindent tabstop=4 shiftwidth=4 nosmarttab noexpandtab textwidth=120 comments=sl:/*,mb:\ *,elx:\ */
+          \ | let b:airline_whitespace_checks = [ 'indent', 'trailing', 'long' ]
 
     " template language support (SGML / XML too)
     " ------------------------------------------
@@ -182,12 +184,6 @@ nmap <F11> :TagbarToggle<CR>
 " Plugin options {{{1
 let g:bufferline_echo = 0
 
-if exists("+statusline")
-  set statusline+=%#warningmsg#
-  set statusline+=%{SyntasticStatuslineFlag()}
-  set statusline+=%*
-endif
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -201,6 +197,7 @@ let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#hunks#enabled = 1
 let g:airline#extensions#whitespace#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
 " }}}1
 
 if (&t_Co > 2 || has("gui_running")) && has("syntax") " {{{1
