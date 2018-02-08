@@ -13,7 +13,7 @@ set hlsearch
 
 if &listchars ==# 'eol:$'
   if (&termencoding ==# 'utf-8' || &encoding ==# 'utf-8') && version >= 700
-    let &listchars = "tab:\u21e5\u00b7,trail:\u2423,extends:\u21c9,precedes:\u21c7,nbsp:\u26ad"
+    let &listchars = "tab:\u21e5\u00b7,trail:\u2423,extends:\u21c9,precedes:\u21c7,nbsp:\u26ad,eol:\u23ce"
     let &fillchars = "vert:\u259a,fold:\u00b7"
   else
     set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
@@ -204,7 +204,7 @@ if (&t_Co > 2 || has("gui_running")) && has("syntax") " {{{1
   function! s:initialize_font()
     if exists("&guifont")
       if has("mac")
-        set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h13,Menlo:h13
+        set guifont=Meslo\ LG\ M\ Regular\ for\ Powerline:h14,Menlo:h14
         if has("gui_running")
           set macthinstrokes
         endif
@@ -234,7 +234,7 @@ if (&t_Co > 2 || has("gui_running")) && has("syntax") " {{{1
   augroup RCVisual
     autocmd!
     autocmd VimEnter *  if !has("gui_running") | set background=dark notitle noicon | endif
-    autocmd GUIEnter *  set background=dark title icon lines=32 columns=100 guioptions-=T guioptions-=m guioptions-=e guioptions-=r guioptions-=L
+    autocmd GUIEnter *  set background=dark title icon lines=48 columns=140 guioptions-=T guioptions-=m guioptions-=e guioptions-=r guioptions-=L
     autocmd GUIEnter *  if has("diff") && &diff | set columns=165 | endif
     autocmd GUIEnter *  silent! colorscheme solarized
     autocmd GUIEnter *  call s:initialize_font()
